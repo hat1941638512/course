@@ -17,6 +17,7 @@ public class TestService {
         TestExample example = new TestExample();
         TestExample.Criteria criteria = example.createCriteria();
         criteria.andIdEqualTo(1);
+        example.setOrderByClause("id desc");
         return testMapper.selectByExample(example);
     }
 }
